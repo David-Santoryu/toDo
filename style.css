@@ -79,16 +79,18 @@ ul {
   padding: 0px 10px;
   width: 100%;
   margin-bottom: 10px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .task-align label {
   padding: 20px;
 }
 
+.container input[type="checkbox"] {
+}
+
 /* Crear el VISTO del checkbox */
 .task-align input[type="checkbox"] + label::after {
-  color: red;
   content: "";
   width: 12px;
   height: 6px;
@@ -101,8 +103,9 @@ ul {
   transform: rotate(-55deg);
 }
 
+/* Crear el VISTO del checkbox al CLICAR*/
 .task-align input[type="checkbox"]:checked + label::after {
-  border: 4px solid blue;
+  border: 4px solid var(--tomato);
   border-right: 0;
   border-top: 0;
 }
@@ -114,29 +117,29 @@ ul {
   height: 26px;
   float: left;
   margin: 0.5em 0.5em 0 0;
-  border: 2px solid green;
+  border: 2px solid black;
 }
 
+/* Crear el RECUADRO del checkbox al CLICAR*/
 .task-align input[type="checkbox"]:checked + label::before {
-  border-color: blue;
-  color: blue;
+  border-color: var(--tomato);
+  color: var(--tomato);
 }
 
+/* Para que el RECUADRO del checkbox y el LABEL se desplacen a la derecha*/
 .task-align input[type="checkbox"] + label {
-  border: 1px solid red;
-  /* display: flex; */
-  /* justify-content: center; */
-  align-items: center;
-  width: 300px;
+  margin-left: 45px;
 }
 
-label {
-  border: 4px solid green;
-  padding-top: 30px;
+/* Alinear con line-height el RECUADRO y el texto*/
+input[type="checkbox"] + label {
+  line-height: 3em;
 }
 
+/* Darle color al VISTO del checkbox al CLICAR*/
 .task-align input[type="checkbox"]:checked + label {
-  color: blue;
+  color: var(--tomato);
+  text-decoration: line-through;
 }
 
 input[type="checkbox"] {
@@ -148,4 +151,12 @@ input[type="checkbox"] {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  background-color: var(--white);
+}
+
+.button-delete-item:hover {
+  cursor: pointer;
+  color: var(--tomato);
+  border-color: var(--tomato);
+  background-color: var(--white);
 }
