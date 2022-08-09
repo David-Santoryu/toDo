@@ -5,9 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>to Do List</title>
   </head>
   <body>
+    <div>
+      <ul>
+        <li>
+          <form action="">
+            <input type="text" class="input-text" placeholder="Pestaña 1" />
+            <input type="submit" class="input-submit" value="Agregar" />
+          </form>
+        </li>
+      </ul>
+    </div>
+    <div class="fecha"></div>
+    <div class="section-task">
+      <h2>Hola, ¿qué tal estás hoy?</h2>
+      <span>No olvides anotar todo lo que necesites</span>
+    </div>
+    <div class="container">
+      <form action="">
+        <input
+          type="text"
+          class="input-text"
+          placeholder="Añade aquí el producto"
+        />
+        <input type="submit" class="input-submit" value="Agregar" />
+      </form>
+    </div>
+    <div class="section-task">
+      <h4>
+        Estos son tus <span class="mayusculas">productos pendientes...</span>
+      </h4>
+    </div>
+    <ul class="task-container">
+      <li class="task-align">
+        <input id="task1" type="checkbox" />
+        <label for="task1">Tarea 1</label>
+        <button class="button-delete-item fas fa-trash de"></button>
+      </li>
+      <li class="task-align">
+        <input id="task2" type="checkbox" />
+        <label for="task2">Tarea 2</label>
+        <button class="button-delete-item fas fa-trash de"></button>
+      </li>
+    </ul>
     <script src="/main.js"></script>
   </body>
 </html>

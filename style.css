@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Varela Round", sans-serif;
+  background-color: var(--blue-lightsky);
+}
+
+:root {
+  --white: #fafafb;
+  --blue-lightsky: #87cefa;
+  --blue-dark: #2a73c2;
+  --lightcoral: #f08080;
+  --tomato: #ff6347;
+}
+
+ul {
+  list-style: none;
+}
+
+.section-task {
+  text-align: center;
+  padding: 20px;
+}
+
+.container .input-text {
+  border-radius: 8px;
+  border: none;
+  background-color: var(--white);
+  padding: 10px;
+  margin: 10px;
+  font-family: "Varela Round", sans-serif;
+}
+
+.container .input-submit {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 10px;
+  font-family: "Varela Round", sans-serif;
+  border-radius: 50px;
+}
+
+.container .input-submit:hover {
+  cursor: pointer;
+  border: 2px solid var(--blue-dark);
+  color: var(--blue-dark);
+  font-weight: 800;
+}
+
+.section-task .mayusculas {
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.task-align {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid red;
+}
+
+.task-align label {
+  padding: 20px;
+}
+
+/* Crear el VISTO del checkbox */
+.task-align input[type="checkbox"] + label::after {
+  color: red;
+  content: "";
+  width: 12px;
+  height: 6px;
+  border: 4px solid var(--blue-lightsky);
+  float: left;
+  margin-left: -1.95em;
+  border-right: 0;
+  border-top: 0;
+  margin-top: 1em;
+  transform: rotate(-55deg);
+}
+
+.task-align input[type="checkbox"]:checked + label::after {
+  border: 4px solid blue;
+  border-right: 0;
+  border-top: 0;
+}
+
+/* Crear el RECUADRO del checkbox */
+.task-align input[type="checkbox"] + label::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  float: left;
+  margin: 0.5em 0.5em 0 0;
+  border: 2px solid green;
+}
+
+.task-align input[type="checkbox"]:checked + label::before {
+  border-color: blue;
+  color: blue;
+}
+
+.task-align input[type="checkbox"] + label {
+  border: 1px solid red;
+  /* display: flex; */
+  /* justify-content: center; */
+  align-items: center;
+  width: 300px;
+}
+
+label {
+  border: 4px solid green;
+  padding-top: 30px;
+}
+
+.task-align input[type="checkbox"]:checked + label {
+  color: blue;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.button-delete-item {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
