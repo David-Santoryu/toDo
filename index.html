@@ -21,18 +21,21 @@
     <title>to Do List</title>
   </head>
   <body>
-    <div>
-      <ul>
-        <li>
-          <form action="">
-            <input type="text" class="input-text" placeholder="Pestaña 1" />
-            <input type="submit" class="input-submit" value="Agregar" />
-          </form>
+    <div id="pestanas">
+      <ul id="lista">
+        <li id="pestana1">
+          <a href="">Supermercado</a>
+        </li>
+        <input type="submit" class="input-submit" value="+" />
+        <li id="pestana1">
+          <a href="">Otros</a>
         </li>
       </ul>
     </div>
-    <div class="fecha"></div>
     <div class="section-task">
+      <br />
+      <div id="fecha"></div>
+      <br /><br />
       <h2>Hola, ¿qué tal estás hoy?</h2>
       <span>No olvides anotar todo lo que necesites</span>
     </div>
@@ -42,13 +45,14 @@
           type="text"
           class="input-text"
           placeholder="Añade aquí el producto"
+          autofocus
         />
-        <input type="submit" class="input-submit" value="Agregar" />
+        <input type="submit" class="input-submit" value="+" />
       </form>
     </div>
     <div class="section-task">
       <h4>
-        Estos son tus <span class="mayusculas">productos pendientes...</span>
+        Estos son tus <span class="mayusculas">productos a comprar...</span>
       </h4>
     </div>
     <ul class="task-container">
@@ -63,6 +67,9 @@
         <button class="button-delete-item fas fa-trash de"></button>
       </li>
     </ul>
+    <div class="section-task">
+      <h4>Tareas pendientes: 5. Completadas: 3</h4>
+    </div>
     <script src="/main.js"></script>
   </body>
 </html>

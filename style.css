@@ -23,6 +23,40 @@ ul {
   list-style: none;
 }
 
+#pestanas {
+  float: top;
+  font-size: 20px;
+}
+
+#pestanas li {
+  list-style-type: none;
+  float: left;
+  text-align: center;
+  margin: 0px 2px -2px -0px;
+  background: var(--blue-dark);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 2px solid var(--white);
+  border-bottom: var(--white);
+  padding: 0px 20px 0px 20px;
+}
+
+#pestanas a:link {
+  text-decoration: none;
+  color: var(--white);
+}
+
+#pestanas .input-submit {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-style: none;
+  color: var(--blue-lightsky);
+  margin-top: 4px;
+  cursor: pointer;
+}
+
 .section-task {
   text-align: center;
   padding: 20px;
@@ -37,19 +71,44 @@ ul {
   font-family: "Varela Round", sans-serif;
 }
 
-.container .input-submit {
+/* .container .input-submit {
   cursor: pointer;
   border: 0;
   padding: 10px 10px;
   font-family: "Varela Round", sans-serif;
   border-radius: 50px;
-}
+} */
 
-.container .input-submit:hover {
+/* .container .input-submit:hover {
   cursor: pointer;
   border: 2px solid var(--blue-dark);
   color: var(--blue-dark);
   font-weight: 800;
+} */
+
+.container input[type="text"] {
+  background-color: var(--blue-lightsky);
+  border-style: none;
+  font-size: 15px;
+}
+
+.container input[type="text"]:focus {
+  outline: none;
+}
+
+.container input[type="submit"] {
+  font-size: 35px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-style: none;
+  color: var(--blue-lightsky);
+}
+
+.container input[type="submit"]:hover {
+  background-color: var(--lightcoral);
+  cursor: pointer;
+  color: var(--white);
 }
 
 .section-task .mayusculas {
@@ -79,14 +138,13 @@ ul {
   padding: 0px 10px;
   width: 100%;
   margin-bottom: 10px;
+  background-color: var(--white);
+  border-radius: 15px;
   /* border: 1px solid red; */
 }
 
 .task-align label {
-  padding: 20px;
-}
-
-.container input[type="checkbox"] {
+  padding: 10px;
 }
 
 /* Crear el VISTO del checkbox */
@@ -94,7 +152,7 @@ ul {
   content: "";
   width: 12px;
   height: 6px;
-  border: 4px solid var(--blue-lightsky);
+  border: 4px solid var(--white);
   float: left;
   margin-left: -1.95em;
   border-right: 0;
@@ -128,7 +186,7 @@ ul {
 
 /* Para que el RECUADRO del checkbox y el LABEL se desplacen a la derecha*/
 .task-align input[type="checkbox"] + label {
-  margin-left: 45px;
+  margin-left: 15px;
 }
 
 /* Alinear con line-height el RECUADRO y el texto*/
@@ -152,6 +210,7 @@ input[type="checkbox"] {
   height: 40px;
   border-radius: 50%;
   background-color: var(--white);
+  color: var(--blue-lightsky);
 }
 
 .button-delete-item:hover {
