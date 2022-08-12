@@ -44,6 +44,26 @@ ul {
 #pestanas a:link {
   text-decoration: none;
   color: var(--white);
+  font-size: 15px;
+}
+
+#pestanas .input-submit-delete {
+  font-size: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border-style: none;
+  color: var(--blue-lightsky);
+  margin-bottom: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#pestanas .input-submit-delete:hover {
+  color: var(--blue-dark);
+  border: 1px solid var(--blue-dark);
+  margin-bottom: 4px;
+  cursor: pointer;
 }
 
 #pestanas .input-submit {
@@ -55,6 +75,11 @@ ul {
   color: var(--blue-lightsky);
   margin-top: 4px;
   cursor: pointer;
+}
+
+#pestanas .input-submit:hover {
+  color: var(--blue-dark);
+  border: 1px solid var(--blue-dark);
 }
 
 .section-task {
