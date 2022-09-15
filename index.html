@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/dark.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,19 +21,12 @@
     />
     <title>to Do List</title>
   </head>
-  <body>
-    <div id="pestanas">
-      <ul id="lista">
-        <li id="pestana1">
-          <a href="">Supermercado</a>
-          <input type="submit" class="input-submit-delete" value="x" />
-        </li>
-        <input type="submit" class="input-submit" value="+" />
-        <li id="pestana1">
-          <a href="">Otros</a>
-          <input type="submit" class="input-submit-delete" value="x" />
-        </li>
-      </ul>
+  <body class="">
+    <div id="dark-mode">
+      <i class="fa-solid fa-moon"></i>
+    </div>
+    <div id="light-mode">
+      <i class="fa-solid fa-sun"></i>
     </div>
     <div class="section-task">
       <br />
@@ -44,12 +38,13 @@
     <div class="container">
       <form action="">
         <input
+          id="userInput"
           type="text"
           class="input-text"
           placeholder="Añade aquí el producto"
           autofocus
         />
-        <input type="submit" class="input-submit" value="+" />
+        <input type="submit" id="boton" class="input-submit" value="+" />
       </form>
     </div>
     <div class="section-task">
@@ -57,20 +52,32 @@
         Estos son tus <span class="mayusculas">productos a comprar...</span>
       </h4>
     </div>
-    <ul class="task-container">
-      <li class="task-align">
-        <input id="task1" type="checkbox" />
-        <label for="task1">Tarea 1</label>
-        <button class="button-delete-item fas fa-trash de"></button>
-      </li>
-      <li class="task-align">
-        <input id="task2" type="checkbox" />
-        <label for="task2">Tarea 2</label>
-        <button class="button-delete-item fas fa-trash de"></button>
-      </li>
-    </ul>
-    <div class="section-task">
-      <h4>Tareas pendientes: 5. Completadas: 3</h4>
+    <div class="main-container">
+      <div id="pestanas">
+        <ul id="lista">
+          <li id="pestana1">
+            <a href="">Lista 1</a>
+            <input type="submit" class="input-submit-delete" value="x" />
+          </li>
+          <input type="submit" class="input-submit" value="+" />
+          <li id="pestana1">
+            <a href="">Otros</a>
+            <input type="submit" class="input-submit-delete" value="x" />
+          </li>
+        </ul>
+      </div>
+      <div id="taskList">
+        <ul class="task-container">
+          <!-- <li class="task-align">
+          <input id="task1" type="checkbox" />
+          <label for="task1">Tarea 1</label>
+          <button id="task1" class="button-delete-item fas fa-trash de"></button>
+        </li> -->
+        </ul>
+      </div>
+      <div id="stats" class="section-task">
+        <!-- <h4 class="section-task-h4">Tareas pendientes: 5. Completadas: 3</h4> -->
+      </div>
     </div>
     <script src="/main.js"></script>
   </body>
